@@ -2,9 +2,17 @@
 name = "ipfs-api"
 version = "0.1.0"
 authors = ["dignifiedquire <dignifiedquire@gmail.com>"]
+build = "build.rs"
+
+[features]
+default = ["serde_codegen"]
+unstable = ["serde_macros"]
+
+[build-dependencies]
+serde_codegen = { version = "0.8", optional = true }
 
 [dependencies]
-hyper = "0.7"
-serde = "*"
-serde_macros = "*"
-serde_json = "*"
+serde = "0.8"
+serde_json = "0.8"
+serde_macros = { version = "0.8", optional = true }
+hyper = "0.9"
