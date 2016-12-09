@@ -16,3 +16,4 @@ serde = "0.8"
 serde_json = "0.8"
 serde_macros = { version = "0.8", optional = true }
 hyper = "0.9"
+url = "1.2.3"
